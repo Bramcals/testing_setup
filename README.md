@@ -31,8 +31,8 @@ Just reference the test module the same way you import it.
 
 Also you can run a single `TestCase` or a single test method:
 
-    $ python -m unittest test.test_hello_world.HelloWorldTestCase
-    $ python -m unittest test.test_hello_world.HelloWorldTestCase.test_method
+    $ python -m unittest test.test_hello_world.TestHelloWorldTestCase
+    $ python -m unittest test.test_hello_world.HelloWorldTestCase.test_hello_world
 
 **Running all tests:**
 
@@ -41,7 +41,10 @@ You can also use [test discovery][2] which will discover and run all the tests f
     $ cd new_project
     $ python -m unittest discover
 
-This will run all the `test*.py` modules inside the `test` package.
+This will run all the `test*.py` modules inside the `test` package. Like this:
+
+    $ python -m unittest discover --pattern "test*.py"
+
 
 
   [1]: https://docs.python.org/2/library/unittest.html#command-line-interface
